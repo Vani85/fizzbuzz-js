@@ -7,9 +7,10 @@ function fizzbuzz() {
 
     // Print numbers 1 - 100
     for(let i = 1; i<=100; i++) {
-        // Number divisible by 3
+        // Number divisible by 3 and 5
         if(i%3 == 0 && i%5==0)
             console.log("FizzBuzz");
+        // Number divisible by 3
         else if(i%3 == 0) 
             console.log("Fizz");
         //Number divisible by 5
