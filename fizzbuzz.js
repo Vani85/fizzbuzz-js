@@ -5,7 +5,10 @@ function fizzbuzz() {
     
     console.log('Welcome to FizzBuzz!');
 
-    // Put your code here...
+    // Print numbers 1 - 100
+    for(var i = 1; i<=100; i++) {
+        console.log(i);
+    }
 
     
 }
