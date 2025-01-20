@@ -7,10 +7,12 @@ function fizzbuzz() {
 
     // Print numbers 1 - 100
     for(var i = 1; i<=100; i++) {
-        console.log(i);
-    }
-
-    
+        // Number divisible by 3
+        if(i%3 == 0) 
+            console.log("Fizz");
+        else
+            console.log(i);
+    }    
 }
 
 // Now we run the main function...
