@@ -45,7 +45,7 @@ function fizzbuzz() {
             message = "Fezz" + message;  
             appendForThreeFiveSeven(i);
             if(message.includes("FizzBuzz")) {
-                message.replace("FezzFizzBuzz","FizzFezzBuzz") ;
+                message = message.replace("FezzFizzBuzz","FizzFezzBuzz") ;
             }
             appended = true;
         }
