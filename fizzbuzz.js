@@ -1,14 +1,30 @@
 
 let message = "";
 
-function append(number) {   
+// Function to append Fizz and Buzz for numbers divisible by 3 and 5
+function appendForThreeFiveSeven(number) {   
 
         if(number%3 == 0)
             message += "Fizz";
 
         if(number%5 == 0)
             message += "Buzz";
+
+        if(number%7 == 0)
+            message += "Bang";
         
+}
+
+// Function to append Fizz and Buzz for numbers divisible by 3 and 5
+function reverseAppendForThreeFiveSeven(number) {   
+
+    if(number%7 == 0)
+        message += "Bang";
+    if(number%5 == 0)
+        message += "Buzz";
+    if(number%3 == 0)
+        message += "Fizz";
+    
 }
 
 // Here, we create our main function.
@@ -16,7 +32,7 @@ function fizzbuzz() {
     console.log('Welcome to FizzBuzz!');
     
     // Print numbers 1 - 100
-    for(let i = 1; i<=195; i++) {
+    for(let i = 1; i<=255; i++) {
         let appended = false;
         message = "";
 
@@ -25,20 +41,22 @@ function fizzbuzz() {
             appended = true;
         }
 
-        if(i%7 == 0) {
-            message += "Bang";
-            append(i);
+        if(i%13 ==0) {
+            message = "Fezz" + message;  
+            appendForThreeFiveSeven(i);
+            if(message.includes("FizzBuzz")) {
+                message.replace("FezzFizzBuzz","FizzFezzBuzz") ;
+            }
             appended = true;
         }
 
-        if(i%13 ==0) {
-            message = "Fezz" + message;
-            append(i);
+        if(i%17 == 0){
+            reverseAppendForThreeFiveSeven(i);
             appended = true;
         }
 
         if(!appended)
-            append(i);
+            appendForThreeFiveSeven(i);
         
        
         if(message != "")
